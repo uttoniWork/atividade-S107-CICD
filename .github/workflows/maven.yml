@@ -45,3 +45,11 @@ jobs:
 
     - name: Build com maven
       run: mvn clean install
+
+  send-email:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send email
+        uses: actions/checkout@v3
+      - run: sh script/email-script.sh "camila.silva@ges.inatel.br"
