@@ -9,6 +9,9 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  EMAIL: "uttoni.brandani@ges.inatel.br"
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -52,4 +55,4 @@ jobs:
     steps:
       - name: Send email
         uses: actions/checkout@v3
-      - run: sh script/email-script.sh "camila.silva@ges.inatel.br"
+      - run: sh script/email-script.sh $EMAIL
