@@ -49,8 +49,8 @@ jobs:
   send-email:
     runs-on: ubuntu-latest
 
-    variables:
-    EMAIL: "uttoni.brandani@ges.inatel.br"
+    env:
+      EMAIL: "uttoni.brandani@ges.inatel.br"
 
     steps:
     - name: Send email
