@@ -50,10 +50,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      EMAIL1: "camila.silva@ges.inatel.br"
-      EMAIL2: "uttoni.brandani@ges.inatel.br"
+      EMAIL: "uttoni.brandani@ges.inatel.br"
 
     steps:
     - name: Send email
       uses: actions/checkout@v3
-    - run: sh script/email-script.sh $EMAIL2
+    - run: sh script/email-script.sh $EMAIL
