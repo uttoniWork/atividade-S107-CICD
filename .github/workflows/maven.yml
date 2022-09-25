@@ -29,7 +29,7 @@ jobs:
       with:
         name: test-report
         path: target/site/
-        
+
   build:
     runs-on: ubuntu-latest
 
@@ -46,12 +46,13 @@ jobs:
     - name: Build com maven
       run: mvn clean install
 
+  variables:
+    EMAIL: "uttoni.brandani@ges.inatel.br"
+
   send-email:
     runs-on: ubuntu-latest
-    env:
-      EMAIL: "uttoni.brandani@ges.inatel.br"
 
     steps:
-      - name: Send email
-        uses: actions/checkout@v3
-      - run: sh ./script/email-script.sh $EMAIL
+    - name: Send email
+      uses: actions/checkout@v3
+    - run: sh script/email-script.sh $EMAIL

@@ -1,5 +1,7 @@
 package com.inatel.atividade.cicd;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,6 +16,6 @@ public class MotivadorTest {
 
     @Test
     public void sendMessageTest(){
-        motivador.sendMessage();
+        assertEquals("Porra, que vida hein", motivador.sendMessage());
     }
 }
