@@ -46,11 +46,11 @@ jobs:
     - name: Build com maven
       run: mvn clean install
 
-  variables:
-    EMAIL: "uttoni.brandani@ges.inatel.br"
-
   send-email:
     runs-on: ubuntu-latest
+
+    variables:
+    EMAIL: "uttoni.brandani@ges.inatel.br"
 
     steps:
     - name: Send email
