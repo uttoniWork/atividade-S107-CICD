@@ -50,7 +50,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      EMAIL: "uttoni.brandani@ges.inatel.br"
+      EMAIL: "camila.silva@ges.inatel.br"
 
     steps:
     - name: Send email
